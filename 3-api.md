@@ -1,7 +1,5 @@
-**Mobile Development 2021/22 Portfolio**
+**Mobile Development 2022/23 Portfolio**
 # API description
-
-Your username: `your username here`
 
 Student ID: `your id here`
 

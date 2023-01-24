@@ -1,7 +1,5 @@
-**Mobile Development 2021/22 Portfolio**
+**Mobile Development 2023/23 Portfolio**
 # Overview
-
-Your username: `your username here`
 
 Student ID: `your id here`
 
