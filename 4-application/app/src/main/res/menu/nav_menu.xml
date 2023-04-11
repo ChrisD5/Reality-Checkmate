@@ -22,6 +22,10 @@
             android:id="@+id/nav_quiz"
             android:icon="@drawable/nav_quiz"
             android:title="Ego Test"/>
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@drawable/nav_map"
+            android:title="Find Therapy"/>
 
 
     </group>

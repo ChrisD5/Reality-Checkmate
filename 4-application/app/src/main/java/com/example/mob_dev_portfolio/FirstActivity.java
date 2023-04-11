@@ -25,12 +25,14 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
     private DrawerLayout drawerLayout;
     private ActivityFirstBinding binding;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityFirstBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+
 
         setTitle(" ");
 
@@ -108,6 +110,9 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
                 break;
             case R.id.nav_quiz:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new QuizFragment()).commit();
+                break;
+            case R.id.nav_map:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MapFragment()).commit();
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
