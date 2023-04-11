@@ -56,8 +56,8 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
         //In order to test notification functionality, change this date to your current date +2 minutes and restart the app then close app in emulator.
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR_OF_DAY, 16);
-        calendar.set(Calendar.MINUTE, 25);
-        calendar.set(Calendar.SECOND, 30);
+        calendar.set(Calendar.MINUTE, 35);
+        calendar.set(Calendar.SECOND, 00);
 
         if (Calendar.getInstance().after(calendar)) {
             calendar.add(Calendar.DAY_OF_MONTH, 1);
@@ -105,6 +105,9 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
                 break;
             case R.id.nav_view:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ViewNotifications()).commit();
+                break;
+            case R.id.nav_quiz:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new QuizFragment()).commit();
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
