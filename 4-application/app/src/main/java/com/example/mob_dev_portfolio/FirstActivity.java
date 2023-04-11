@@ -1,8 +1,11 @@
 package com.example.mob_dev_portfolio;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.splashscreen.SplashScreen;
-
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import android.app.AlarmManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -10,32 +13,44 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowInsetsController;
 import com.example.mob_dev_portfolio.databinding.ActivityFirstBinding;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.Calendar;
 
-public class FirstActivity extends AppCompatActivity {
+public class FirstActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    private DrawerLayout drawerLayout;
     private ActivityFirstBinding binding;
-    private boolean keep = true;
-    private final int DELAY = 2000;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        SplashScreen splashScreen = SplashScreen.installSplashScreen(this);
         super.onCreate(savedInstanceState);
         binding = ActivityFirstBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
-        setTheme(R.style.Theme_AppCompat_Light);
-        getSupportActionBar().hide();
         setContentView(view);
 
-        splashScreen.setKeepOnScreenCondition(() -> keep);
-        Handler handler = new Handler();
-        handler.postDelayed(() -> keep = false, DELAY);;
+
+        setTitle(" ");
+
+        Toolbar toolbar = findViewById(R.id.toolbar); //Ignore red line errors
+
+        setSupportActionBar(toolbar);
+        drawerLayout = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav,
+                R.string.close_nav);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+            navigationView.setCheckedItem(R.id.nav_home);
+        }
+
 
         NotificationChannel();
 
@@ -43,7 +58,7 @@ public class FirstActivity extends AppCompatActivity {
         //In order to test notification functionality, change this date to your current date +2 minutes and restart the app then close app in emulator.
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR_OF_DAY, 16);
-        calendar.set(Calendar.MINUTE, 49);
+        calendar.set(Calendar.MINUTE, 35);
         calendar.set(Calendar.SECOND, 00);
 
         if (Calendar.getInstance().after(calendar)) {
@@ -59,6 +74,8 @@ public class FirstActivity extends AppCompatActivity {
             alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),pendingIntent);
         }
     }
+
+
 
     private void NotificationChannel() {
 
@@ -76,5 +93,39 @@ public class FirstActivity extends AppCompatActivity {
 
         }
     }
+
+
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.nav_home:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+                break;
+            case R.id.nav_create:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CreateFragment()).commit();
+                break;
+            case R.id.nav_view:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ViewNotifications()).commit();
+                break;
+            case R.id.nav_quiz:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new QuizFragment()).commit();
+                break;
+            case R.id.nav_map:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MapFragment()).commit();
+                break;
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
+    }
+    @Override
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
 }
+
 
