@@ -4,10 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.splashscreen.SplashScreen;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-
 import android.app.AlarmManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -57,9 +55,9 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
 
         //In order to test notification functionality, change this date to your current date +2 minutes and restart the app then close app in emulator.
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, 9);
-        calendar.set(Calendar.MINUTE, 30);
-        calendar.set(Calendar.SECOND, 00);
+        calendar.set(Calendar.HOUR_OF_DAY, 16);
+        calendar.set(Calendar.MINUTE, 25);
+        calendar.set(Calendar.SECOND, 30);
 
         if (Calendar.getInstance().after(calendar)) {
             calendar.add(Calendar.DAY_OF_MONTH, 1);
@@ -94,6 +92,8 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
         }
     }
 
+
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
@@ -102,6 +102,9 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
                 break;
             case R.id.nav_create:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CreateFragment()).commit();
+                break;
+            case R.id.nav_view:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ViewNotifications()).commit();
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);

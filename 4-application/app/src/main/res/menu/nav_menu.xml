@@ -9,11 +9,15 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/nav_home"
-            android:title="Home"/>
+            android:title="Home" />
         <item
             android:id="@+id/nav_create"
             android:icon="@drawable/nav_custom_affirmation"
             android:title="Create Notification"/>
+        <item
+            android:id="@+id/nav_view"
+            android:icon="@drawable/nav_view"
+            android:title="View Notifications"/>
 
     </group>
 
