@@ -10,64 +10,6 @@
     android:background="@color/DarkestGrey"
     tools:context=".HomeFragment">
 
-    <!--    <Button-->
-<!--        android:id="@+id/button_get"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-
-<!--        android:layout_marginStart="161dp"-->
-<!--        android:layout_marginEnd="162dp"-->
-<!--        android:background="#CFCACA"-->
-<!--        android:backgroundTint="#373636"-->
-<!--        android:fontFamily="monospace"-->
-<!--        android:text="Get All"-->
-<!--        android:textColor="#FFFFFF"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="1.0"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.259" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/button_insert"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-
-<!--        android:layout_marginStart="161dp"-->
-<!--        android:layout_marginEnd="162dp"-->
-<!--        android:background="#CFCACA"-->
-<!--        android:backgroundTint="#373636"-->
-<!--        android:fontFamily="monospace"-->
-<!--        android:text="Add custom activity"-->
-<!--        android:paddingLeft="10dp"-->
-<!--        android:paddingRight="10dp"-->
-<!--        android:textColor="#FFFFFF"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.0"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.348" />-->
-
-    <!--    <Button-->
-<!--        android:id="@+id/button_delete"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-
-<!--        android:layout_marginStart="161dp"-->
-<!--        android:layout_marginEnd="162dp"-->
-<!--        android:background="#CFCACA"-->
-<!--        android:backgroundTint="#373636"-->
-<!--        android:fontFamily="monospace"-->
-<!--        android:text="Delete Last"-->
-<!--        android:textColor="#FFFFFF"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.932" />-->
-
     <Button
         android:id="@+id/button_init"
         android:layout_width="140dp"
@@ -121,7 +63,7 @@
         android:layout_marginBottom="484dp"
         android:fontFamily="monospace"
         android:gravity="center"
-        android:text="Daily Activity:"
+        android:text="Try Something New:"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
