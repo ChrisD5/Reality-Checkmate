@@ -40,12 +40,34 @@ public class MemoBroadcast extends BroadcastReceiver {
 
             List<String> notifications = new ArrayList<>();
             String line = reader.readLine();
-            notifications.add("You're not as perfect as you think.");
-            notifications.add("You're not the only one with good ideas.");
-            notifications.add("You're not the only one who can do this.");
-            notifications.add("Think about other people for once.");
-            notifications.add("It's okay to be wrong sometimes.");
-            notifications.add("You don't have to win every argument.");
+            notifications.add("You're not as perfect as you think. Take a step back and reassess.");
+            notifications.add("You're not the only one with good ideas. Listen to others and collaborate.");
+            notifications.add("You're not the only one who can do this. Trust and delegate tasks.");
+            notifications.add("Think about other people for once. Show empathy and kindness.");
+            notifications.add("It's okay to be wrong sometimes. Learn from your mistakes.");
+            notifications.add("You don't have to win every argument. Sometimes it's better to just let it go.");
+            notifications.add("Acknowledge and learn from your mistakes. Growth comes from failure.");
+            notifications.add("Don't let success get to your head. Stay humble and grounded.");
+            notifications.add("Be open to feedback from others. It can help you improve.");
+            notifications.add("Don't put others down to make yourself look better. Lift each other up.");
+            notifications.add("Practice empathy and understanding towards others. Everyone has their own story.");
+            notifications.add("Be willing to compromise and collaborate with others. It can lead to better outcomes.");
+            notifications.add("Take responsibility for your actions and their consequences. Own up to your mistakes.");
+            notifications.add("Don't judge others based on their appearance or background. Get to know them for who they are.");
+            notifications.add("Challenge yourself to learn and grow every day. It can lead to new opportunities.");
+            notifications.add("Avoid seeking attention and validation for every little thing. Focus on your own growth.");
+            notifications.add("Give credit where credit is due. Recognize the efforts of those around you.");
+            notifications.add("Appreciate the value and contributions of others. We are all part of a team.");
+            notifications.add("Remember that everyone has their own struggles and challenges. Be kind and supportive.");
+            notifications.add("Don't be afraid to ask for help or support when you need it. We all need a helping hand sometimes.");
+            notifications.add("Be humble and grateful for what you have. Appreciate the present moment.");
+            notifications.add("Treat others with kindness and respect, regardless of their status. We are all equal.");
+            notifications.add("Focus on the journey, not just the destination. Enjoy the process.");
+            notifications.add("Be mindful of your impact on others and the world around you. Small actions can make a big difference.");
+            notifications.add("Don't take yourself too seriously. Laugh at yourself and enjoy life.");
+
+
+
             while (line != null) {
                 String description = line.trim();
                 if (!description.isEmpty()) {
