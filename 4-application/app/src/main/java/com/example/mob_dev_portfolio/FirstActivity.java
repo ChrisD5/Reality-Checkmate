@@ -57,8 +57,8 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
 
         //In order to test notification functionality, change this date to your current date +2 minutes and restart the app then close app in emulator.
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, 16);
-        calendar.set(Calendar.MINUTE, 35);
+        calendar.set(Calendar.HOUR_OF_DAY, 21);
+        calendar.set(Calendar.MINUTE, 43);
         calendar.set(Calendar.SECOND, 00);
 
         if (Calendar.getInstance().after(calendar)) {
