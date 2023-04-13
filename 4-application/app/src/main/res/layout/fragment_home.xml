@@ -1,19 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
+
+
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/DarkestGrey"
     tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!--    <Button-->
+<!--        android:id="@+id/button_get"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:layout_marginStart="161dp"-->
+<!--        android:layout_marginEnd="162dp"-->
+<!--        android:background="#CFCACA"-->
+<!--        android:backgroundTint="#373636"-->
+<!--        android:fontFamily="monospace"-->
+<!--        android:text="Get All"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="1.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.259" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button_insert"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:layout_marginStart="161dp"-->
+<!--        android:layout_marginEnd="162dp"-->
+<!--        android:background="#CFCACA"-->
+<!--        android:backgroundTint="#373636"-->
+<!--        android:fontFamily="monospace"-->
+<!--        android:text="Add custom activity"-->
+<!--        android:paddingLeft="10dp"-->
+<!--        android:paddingRight="10dp"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.348" />-->
+
+    <!--    <Button-->
+<!--        android:id="@+id/button_delete"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:layout_marginStart="161dp"-->
+<!--        android:layout_marginEnd="162dp"-->
+<!--        android:background="#CFCACA"-->
+<!--        android:backgroundTint="#373636"-->
+<!--        android:fontFamily="monospace"-->
+<!--        android:text="Delete Last"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.932" />-->
+
+    <Button
+        android:id="@+id/button_init"
+        android:layout_width="140dp"
+        android:layout_height="26dp"
+
+        android:layout_marginStart="61dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="116dp"
+        android:background="#CFCACA"
+        android:backgroundTint="#373636"
+        android:fontFamily="monospace"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Generate"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/display_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.193" />
+
+    <Button
+        android:id="@+id/display_button"
+        android:layout_width="139dp"
+        android:layout_height="26dp"
+
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="64dp"
+        android:background="#CFCACA"
+        android:backgroundTint="#373636"
+        android:fontFamily="monospace"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+
+        android:text="Display "
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_init"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.161" />
+
     <TextView
+        android:id="@+id/subheading_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Home Fragment"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"
-        android:textColor="@color/DarkGrey"
-        />
-</RelativeLayout>
+        android:layout_marginStart="178dp"
+        android:layout_marginEnd="175dp"
+        android:layout_marginBottom="484dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Daily Activity:"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/activity_text_view"
+        android:layout_width="337dp"
+        android:layout_height="194dp"
+        android:background="#373636"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text=""
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <TextView
+        android:id="@+id/subheading_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="178dp"
+        android:layout_marginEnd="175dp"
+        android:layout_marginBottom="172dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Difficulty:"
+        android:textColor="#FFFFFF"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/activity_difficulty_text_view"
+        android:layout_width="222dp"
+        android:layout_height="63dp"
+        android:background="#373636"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.866" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
