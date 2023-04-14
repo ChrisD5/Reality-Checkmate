@@ -15,6 +15,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+
 import com.example.mob_dev_portfolio.databinding.ActivityFirstBinding;
 import com.google.android.material.navigation.NavigationView;
 
@@ -113,6 +114,9 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
                 break;
             case R.id.nav_map:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MapFragment()).commit();
+                break;
+            case R.id.nav_journal:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new JournalFragment()).commit();
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);

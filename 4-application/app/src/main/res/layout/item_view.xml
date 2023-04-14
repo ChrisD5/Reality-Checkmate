@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:padding="10dp"
+    android:background="@drawable/rounded_corners"
+    android:layout_marginBottom="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleoutput"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:fontFamily="monospace"
+        tools:text="My title"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/descriptionoutput"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/titleoutput"
+        android:fontFamily="monospace"
+        tools:text="long long long long description"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeoutput"
+        android:layout_below="@id/descriptionoutput"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:gravity="end"
+        android:fontFamily="monospace"
+        tools:text="Jan 21 2023"
+        />
+
+</RelativeLayout>
