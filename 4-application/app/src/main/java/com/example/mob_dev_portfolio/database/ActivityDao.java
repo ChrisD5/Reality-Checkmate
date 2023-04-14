@@ -13,18 +13,12 @@ public interface ActivityDao {
     @Query("SELECT * FROM Activity")
     List<Activity> getAllActivities();
 
-    @Query("SELECT * FROM Activity WHERE activity_name = :name LIMIT 1")
-    Activity getByName(String name);
-
     @Insert
     void insertAll(Activity... activities);
 
-    @Delete
-    void delete(Activity activity);
-
-    @Query("SELECT * FROM Activity ORDER BY uid DESC LIMIT 1")
-    Activity getMostRecentlyAdded();
-
     @Query("DELETE FROM Activity")
     void deleteAllActivities();
+
+    @Delete
+    void deleteActivity(Activity activity);
 }

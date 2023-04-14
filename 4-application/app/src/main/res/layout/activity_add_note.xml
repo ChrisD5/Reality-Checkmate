@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNoteActivity"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/DarkestGrey">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titletextview"
+        android:text="Add New Note"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/rounded_corners">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/titleinput"
+                android:hint="Title"
+                android:background="#7f7f7f"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="monospace"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/descriptioninput"
+                android:hint="Description"
+                android:background="#7f7f7f"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="monospace"
+                android:lines="10"
+                android:gravity="top"
+                android:textColor="#FFFFFF" />
+
+
+
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/savebtn"
+        android:text="Save Note"
+        android:layout_gravity="center"
+        android:backgroundTint="#7f7f7f"
+        android:fontFamily="monospace"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" />
+
+
+</LinearLayout>
