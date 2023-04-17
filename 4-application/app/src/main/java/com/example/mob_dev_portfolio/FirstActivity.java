@@ -10,6 +10,7 @@ import android.app.AlarmManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -19,6 +20,8 @@ import android.view.View;
 import com.example.mob_dev_portfolio.databinding.ActivityFirstBinding;
 import com.google.android.material.navigation.NavigationView;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Calendar;
 
 public class FirstActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -74,9 +77,17 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),pendingIntent);
         }
+
+        //Extreme Bug-fixing - Loads view notifications fragment on app start by adding a custom notification to the notifications.txt file.
+        try{
+            FileOutputStream fileOutputStream = getApplicationContext().openFileOutput("notifications.txt", Context.MODE_APPEND);
+            fileOutputStream.write("Don't let fear hold you back. Take calculated risks and trust in yourself.".getBytes());
+            fileOutputStream.write(System.getProperty("line.separator").getBytes());
+            fileOutputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-
-
 
     private void NotificationChannel() {
 
