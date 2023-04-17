@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -42,7 +43,17 @@ import com.google.android.libraries.places.widget.Autocomplete;
 import com.google.android.libraries.places.widget.AutocompleteActivity;
 import com.google.android.libraries.places.widget.model.AutocompleteActivityMode;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,6 +110,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         LatLng home = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
         myMap.addMarker(new MarkerOptions().position(home).title("My Location"));
         myMap.moveCamera(com.google.android.gms.maps.CameraUpdateFactory.newLatLngZoom(home, 10));
+        findTherapist();
     }
 
 
@@ -131,7 +143,91 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
                 }
             }
     );
+
+    public void findTherapist() {
+        String url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="
+                + currentLocation.getLatitude()
+                + "," + currentLocation.getLongitude()
+                + "&radius=5000&type=therapist&keyword=therapist" +
+                "&key="
+                + getString(R.string.my_map_api_key);
+
+        new PlaceTask().execute(url);
+    }
+
+
+    private class PlaceTask extends AsyncTask<String, Integer, String> {
+
+        @Override
+        protected String doInBackground(String... strings) {
+            String data = null;
+            try {
+                data = downloadUrl(strings[0]);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return data;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            new ParserTask().execute(s);
+        }
+    }
+
+    private String downloadUrl(String string) throws IOException {
+        URL url = new URL(string);
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        connection.connect();
+        InputStream stream = connection.getInputStream();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
+        StringBuilder builder = new StringBuilder();
+        String line = "";
+        while ((line = reader.readLine()) != null) {
+            builder.append(line);
+        }
+        String data = builder.toString();
+        reader.close();
+        return data;
+
+    }
+
+    private class ParserTask extends AsyncTask<String, Integer, List<HashMap<String, String>>> {
+
+        @Override
+        protected List<HashMap<String, String>> doInBackground(String... strings) {
+            JsonParser jsonParser = new JsonParser();
+            List<HashMap<String, String>> mapList = null;
+            JSONObject object = null;
+            try {
+                object = new JSONObject(strings[0]);
+                mapList = jsonParser.parseResult(object);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            return mapList;
+        }
+
+        @Override
+        protected void onPostExecute(List<HashMap<String, String>> hashMaps) {
+            myMap.clear();
+            for (int i = 0; i < hashMaps.size(); i++) {
+                HashMap<String, String> hashMapList = hashMaps.get(i);
+                double lat = Double.parseDouble(hashMapList.get("lat"));
+                double lng = Double.parseDouble(hashMapList.get("lng"));
+                String name = hashMapList.get("name");
+                LatLng latLng = new LatLng(lat, lng);
+                MarkerOptions options = new MarkerOptions();
+                options.position(latLng);
+                options.title(name);
+                myMap.addMarker(options);
+
+            }
+        }
+    }
+
 }
+
 
 
 
