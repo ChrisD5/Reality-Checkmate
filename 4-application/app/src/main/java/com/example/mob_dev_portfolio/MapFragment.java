@@ -104,16 +104,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         }
     }
 
-    @Override
-    public void onMapReady(@NonNull GoogleMap googleMap) {
-        myMap = googleMap;
-        LatLng home = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
-        myMap.addMarker(new MarkerOptions().position(home).title("My Location"));
-        myMap.moveCamera(com.google.android.gms.maps.CameraUpdateFactory.newLatLngZoom(home, 10));
-        findTherapist();
-    }
-
-
 
     private final ActivityResultLauncher<String> requestPermissionLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), result -> {
         if (result) {
@@ -226,6 +216,15 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         }
     }
 
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+        myMap = googleMap;
+        LatLng home = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
+        myMap.addMarker(new MarkerOptions().position(home).title("My Location"));
+        myMap.moveCamera(com.google.android.gms.maps.CameraUpdateFactory.newLatLngZoom(home, 10));
+        findTherapist();
+
+    }
 }
 
 
