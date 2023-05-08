@@ -77,16 +77,6 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),pendingIntent);
         }
-
-        //Extreme Bug-fixing - Loads view notifications fragment on app start by adding a custom notification to the notifications.txt file.
-        try{
-            FileOutputStream fileOutputStream = getApplicationContext().openFileOutput("notifications.txt", Context.MODE_APPEND);
-            fileOutputStream.write("Don't let fear hold you back. Take calculated risks and trust in yourself.".getBytes());
-            fileOutputStream.write(System.getProperty("line.separator").getBytes());
-            fileOutputStream.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     private void NotificationChannel() {

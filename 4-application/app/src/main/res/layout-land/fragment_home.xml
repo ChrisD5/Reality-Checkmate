@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DarkestGrey"
+    tools:context=".HomeFragment">
+
+    <Button
+        android:id="@+id/button_init"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="monospace"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Generate"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/display_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subheading_activity2" />
+
+    <Button
+        android:id="@+id/display_button"
+        android:layout_width="139dp"
+        android:layout_height="40dp"
+
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="monospace"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Display "
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_init"
+        app:layout_constraintTop_toBottomOf="@+id/subheading_activity2" />
+
+    <TextView
+        android:id="@+id/subheading_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="@string/heading_activity"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_init" />
+
+    <TextView
+        android:id="@+id/subheading_activity2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Tap To Display Random Activity:"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/activity_text_view"
+        android:layout_width="678dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="12dp"
+        android:background="#373636"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Use these activites as a way of actively engaging in your recovery. If the difficulty is too high, try changing to a lower difficulty activity."
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subheading_activity" />
+
+    <TextView
+        android:id="@+id/subheading_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Difficulty:"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_text_view" />
+
+    <TextView
+        android:id="@+id/activity_difficulty_text_view"
+        android:layout_width="262dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="8dp"
+        android:background="#373636"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="0/10"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subheading_difficulty" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

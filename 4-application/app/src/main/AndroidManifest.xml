@@ -18,16 +18,11 @@
         <activity
             android:name=".AddNoteActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:screenOrientation="portrait"
-            android:configChanges="orientation|keyboardHidden"
-            />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
             android:name=".SplashActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.SplashScreen"
-            android:screenOrientation="portrait"
-            android:configChanges="orientation|keyboardHidden">
+            android:theme="@style/Theme.AppCompat.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,9 +32,7 @@
         <activity
             android:name=".FirstActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:screenOrientation="portrait"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
 
         <receiver
             android:name=".MemoBroadcast"
