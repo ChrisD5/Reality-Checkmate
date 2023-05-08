@@ -210,18 +210,23 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
 
     private class ParserTask extends AsyncTask<String, Integer, List<HashMap<String, String>>> {
 
+
         @Override
         protected List<HashMap<String, String>> doInBackground(String... strings) {
-            JsonParser jsonParser = new JsonParser();
-            List<HashMap<String, String>> mapList = null;
-            JSONObject object = null;
-            try {
-                object = new JSONObject(strings[0]);
-                mapList = jsonParser.parseResult(object);
-            } catch (JSONException e) {
-                e.printStackTrace();
+            if (strings[0] == null) {
+                return null;
+            } else {
+                JsonParser jsonParser = new JsonParser();
+                List<HashMap<String, String>> mapList = null;
+                JSONObject object = null;
+                try {
+                    object = new JSONObject(strings[0]);
+                    mapList = jsonParser.parseResult(object);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                return mapList;
             }
-            return mapList;
         }
 
         @Override
