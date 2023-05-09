@@ -1,4 +1,4 @@
-package com.example.mob_dev_portfolio;
+package com.example.mob_dev_portfolio.DailyNotification;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -10,18 +10,23 @@ import android.app.AlarmManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.mob_dev_portfolio.EgoCrush.EgoCrushMain;
+import com.example.mob_dev_portfolio.ViewCreateNotification.CreateFragment;
+import com.example.mob_dev_portfolio.DailyActivity.HomeFragment;
+import com.example.mob_dev_portfolio.EgoJournal.JournalFragment;
+import com.example.mob_dev_portfolio.FindTherapy.MapFragment;
+import com.example.mob_dev_portfolio.EgoQuiz.QuizFragment;
+import com.example.mob_dev_portfolio.R;
+import com.example.mob_dev_portfolio.ViewCreateNotification.ViewNotifications;
 import com.example.mob_dev_portfolio.databinding.ActivityFirstBinding;
 import com.google.android.material.navigation.NavigationView;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.Calendar;
 
 public class FirstActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -118,6 +123,9 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
                 break;
             case R.id.nav_journal:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new JournalFragment()).commit();
+                break;
+            case R.id.nav_crush:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new EgoCrushMain()).commit();
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);

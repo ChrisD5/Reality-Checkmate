@@ -1,4 +1,4 @@
-package com.example.mob_dev_portfolio;
+package com.example.mob_dev_portfolio.EgoJournal;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -10,8 +10,9 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.mob_dev_portfolio.database.Note;
-import com.example.mob_dev_portfolio.database.NoteDao;
+import com.example.mob_dev_portfolio.Database.Note;
+import com.example.mob_dev_portfolio.Database.NoteDao;
+import com.example.mob_dev_portfolio.R;
 
 import java.text.DateFormat;
 import java.util.List;

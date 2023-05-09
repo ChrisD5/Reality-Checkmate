@@ -1,4 +1,4 @@
-package com.example.mob_dev_portfolio;
+package com.example.mob_dev_portfolio.FindTherapy;
 
 import org.json.JSONArray;
 import org.json.JSONException;

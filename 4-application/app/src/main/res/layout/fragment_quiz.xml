@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/DarkestGrey"
     android:padding="24dp"
-    tools:context=".HomeFragment">
+    tools:context=".DailyActivity.HomeFragment">
 
     <TextView
         android:id="@+id/total_questions"

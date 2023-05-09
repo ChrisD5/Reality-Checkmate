@@ -1,4 +1,4 @@
-package com.example.mob_dev_portfolio.database;
+package com.example.mob_dev_portfolio.Database;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

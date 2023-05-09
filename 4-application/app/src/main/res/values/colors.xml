@@ -9,5 +9,12 @@
     <color name="white">#FFFFFFFF</color>
     <color name="DarkGrey">#5A5A5A</color>
     <color name="DarkestGrey">#2D2D2D</color>
+        <color name="colorPrimary">#5A5A5A</color>
+        <color name="colorPrimaryDark">#184b5a</color>
+        <color name="colorBackground">#2D2D2D</color>
+        <color name="colorAccent">#0A3664</color>
+    <color name="colorBlack">#5A5A5A</color>
+    <color name="colorWhite">#FFFFFFFF</color>
+
 
 </resources>

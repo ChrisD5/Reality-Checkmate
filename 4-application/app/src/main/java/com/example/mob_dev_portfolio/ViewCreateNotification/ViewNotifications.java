@@ -1,5 +1,4 @@
-package com.example.mob_dev_portfolio;
-import android.content.SharedPreferences;
+package com.example.mob_dev_portfolio.ViewCreateNotification;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,7 +10,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+
+import com.example.mob_dev_portfolio.DailyNotification.NotificationAdapter;
+import com.example.mob_dev_portfolio.DailyNotification.NotificationItem;
+import com.example.mob_dev_portfolio.R;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;

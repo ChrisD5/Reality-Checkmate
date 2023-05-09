@@ -30,6 +30,10 @@
             android:id="@+id/nav_journal"
             android:icon="@drawable/nav_journal"
             android:title="Ego Journal"/>
+        <item
+            android:id="@+id/nav_crush"
+            android:icon="@drawable/nav_crush"
+            android:title="Ego Crush"/>
 
 
     </group>

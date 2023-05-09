@@ -1,4 +1,4 @@
-package com.example.mob_dev_portfolio;
+package com.example.mob_dev_portfolio.Splash;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.splashscreen.SplashScreen;
 import android.content.Intent;
@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 
+import com.example.mob_dev_portfolio.DailyNotification.FirstActivity;
 import com.example.mob_dev_portfolio.databinding.ActivitySplashBinding;
 
 public class SplashActivity extends AppCompatActivity {

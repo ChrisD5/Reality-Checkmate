@@ -1,8 +1,6 @@
-package com.example.mob_dev_portfolio;
+package com.example.mob_dev_portfolio.ViewCreateNotification;
 
-import android.app.NotificationManager;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,6 +11,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.mob_dev_portfolio.R;
+import com.example.mob_dev_portfolio.ViewCreateNotification.ViewNotifications;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

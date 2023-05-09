@@ -1,4 +1,4 @@
-package com.example.mob_dev_portfolio;
+package com.example.mob_dev_portfolio.EgoJournal;
 import static android.content.ContentValues.TAG;
 
 import android.content.Intent;
@@ -15,9 +15,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import com.example.mob_dev_portfolio.database.Note;
-import com.example.mob_dev_portfolio.database.NoteDao;
-import com.example.mob_dev_portfolio.database.NoteDatabase;
+
+import com.example.mob_dev_portfolio.EgoJournal.AddNoteActivity;
+import com.example.mob_dev_portfolio.Database.Note;
+import com.example.mob_dev_portfolio.Database.NoteDao;
+import com.example.mob_dev_portfolio.Database.NoteDatabase;
+import com.example.mob_dev_portfolio.EgoJournal.NoteAdapter;
+import com.example.mob_dev_portfolio.R;
 
 
 import java.util.List;

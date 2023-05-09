@@ -1,4 +1,4 @@
-package com.example.mob_dev_portfolio;
+package com.example.mob_dev_portfolio.EgoQuiz;
 
 import android.app.AlertDialog;
 import android.graphics.Color;
@@ -11,6 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.mob_dev_portfolio.EgoQuiz.QuestionAnswer;
+import com.example.mob_dev_portfolio.R;
 
 public class QuizFragment extends Fragment implements View.OnClickListener{
 

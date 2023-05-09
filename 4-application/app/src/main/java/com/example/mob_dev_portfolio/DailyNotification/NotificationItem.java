@@ -1,4 +1,4 @@
-package com.example.mob_dev_portfolio;
+package com.example.mob_dev_portfolio.DailyNotification;
 
 public class NotificationItem {
     private String notification;

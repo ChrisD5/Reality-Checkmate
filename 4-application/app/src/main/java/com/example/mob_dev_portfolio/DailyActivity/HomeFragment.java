@@ -1,4 +1,4 @@
-package com.example.mob_dev_portfolio;
+package com.example.mob_dev_portfolio.DailyActivity;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.room.Room;
@@ -10,8 +10,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.mob_dev_portfolio.database.Activity;
-import com.example.mob_dev_portfolio.database.AppDatabase;
+import com.example.mob_dev_portfolio.Database.Activity;
+import com.example.mob_dev_portfolio.Database.AppDatabase;
+import com.example.mob_dev_portfolio.R;
 
 import java.util.List;
 import java.util.concurrent.ExecutorService;

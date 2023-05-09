@@ -1,4 +1,4 @@
-package com.example.mob_dev_portfolio;
+package com.example.mob_dev_portfolio.DailyNotification;
 
 import android.app.Notification;
 import android.app.PendingIntent;
@@ -12,15 +12,15 @@ import android.util.Log;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
+import com.example.mob_dev_portfolio.DailyNotification.FirstActivity;
+import com.example.mob_dev_portfolio.R;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 import java.util.Random;
 
 public class MemoBroadcast extends BroadcastReceiver {

@@ -16,11 +16,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
         <activity
-            android:name=".AddNoteActivity"
+            android:name=".EgoJournal.AddNoteActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
-            android:name=".SplashActivity"
+            android:name=".Splash.SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.SplashScreen">
             <intent-filter>
@@ -30,12 +30,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FirstActivity"
+            android:name=".DailyNotification.FirstActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
 
         <receiver
-            android:name=".MemoBroadcast"
+            android:name=".DailyNotification.MemoBroadcast"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
