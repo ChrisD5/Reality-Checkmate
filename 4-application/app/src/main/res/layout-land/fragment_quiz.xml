@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DarkestGrey"
+    tools:context=".HomeFragment">
+
+    <TextView
+        android:id="@+id/total_questions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="monospace"
+        android:text="Total Questions"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="236dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="This will be the question"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total_questions" />
+
+    <LinearLayout
+        android:id="@+id/choices_layout"
+        android:layout_width="486dp"
+        android:layout_height="189dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/rounded_corners"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question">
+
+        <Button
+            android:id="@+id/ans_A"
+            android:layout_width="477dp"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:backgroundTint="#7f7f7f"
+            android:fontFamily="monospace"
+            android:text="Ans A"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/ans_B"
+            android:layout_width="476dp"
+            android:layout_height="36dp"
+            android:layout_margin="5dp"
+            android:backgroundTint="#7f7f7f"
+            android:fontFamily="monospace"
+            android:text="Ans B"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/ans_C"
+            android:layout_width="476dp"
+            android:layout_height="38dp"
+            android:layout_margin="5dp"
+            android:backgroundTint="#7f7f7f"
+            android:fontFamily="monospace"
+            android:text="Ans C"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/ans_D"
+            android:layout_width="476dp"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:backgroundTint="#7f7f7f"
+            android:fontFamily="monospace"
+            android:text="Ans D"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="monospace"
+        android:text="Submit"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choices_layout"
+        app:layout_constraintVertical_bias="0.029" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,10 +12,10 @@
         android:id="@+id/total_questions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="monospace"
         android:text="Total Questions"
         android:textColor="@color/white"
-        android:fontFamily="monospace"
-        android:layout_centerHorizontal="true"
         android:textSize="14sp" />
 
     <TextView
