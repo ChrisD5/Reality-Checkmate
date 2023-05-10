@@ -40,7 +40,7 @@ public class CreateFragment extends Fragment {
                 notificationStr = notificationTitle.getText().toString();
                 try {
                     // Append the new notification to the file
-                    FileOutputStream fileOutputStream = getActivity().openFileOutput("notifications.txt", Context.MODE_APPEND);
+                    FileOutputStream fileOutputStream = getActivity().openFileOutput("notifications.xml", Context.MODE_APPEND);
                     fileOutputStream.write(notificationStr.getBytes());
                     fileOutputStream.write(System.getProperty("line.separator").getBytes());
                     fileOutputStream.close();
@@ -57,7 +57,7 @@ public class CreateFragment extends Fragment {
             public void onClick(View v) {
                 // Clear the notifications file
                 try {
-                    FileOutputStream fileOutputStream = getActivity().openFileOutput("notifications.txt", Context.MODE_PRIVATE);
+                    FileOutputStream fileOutputStream = getActivity().openFileOutput("notifications.xml", Context.MODE_PRIVATE);
                     fileOutputStream.write("".getBytes());
                     fileOutputStream.close();
                 } catch (IOException e) {

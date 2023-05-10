@@ -10,6 +10,7 @@ import android.app.AlarmManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -27,6 +28,8 @@ import com.example.mob_dev_portfolio.ViewCreateNotification.ViewNotifications;
 import com.example.mob_dev_portfolio.databinding.ActivityFirstBinding;
 import com.google.android.material.navigation.NavigationView;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Calendar;
 
 public class FirstActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -66,8 +69,8 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
 
         //In order to test notification functionality, change this date to your current date +2 minutes and restart the app then close app in emulator.
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, 21);
-        calendar.set(Calendar.MINUTE, 43);
+        calendar.set(Calendar.HOUR_OF_DAY, 16);
+        calendar.set(Calendar.MINUTE, 16);
         calendar.set(Calendar.SECOND, 00);
 
         if (Calendar.getInstance().after(calendar)) {
@@ -80,9 +83,21 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),pendingIntent);
+            alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+        }
+
+        try{
+            FileOutputStream fileOutputStream = getApplicationContext().openFileOutput("notifications.xml", Context.MODE_APPEND);
+            fileOutputStream.write("Don't let fear hold you back. Take calculated risks and trust in yourself.".getBytes());
+            fileOutputStream.write(System.getProperty("line.separator").getBytes());
+            fileOutputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
+
+
+
 
     private void NotificationChannel() {
 

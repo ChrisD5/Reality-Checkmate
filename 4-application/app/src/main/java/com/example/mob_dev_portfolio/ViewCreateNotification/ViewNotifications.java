@@ -57,7 +57,7 @@ public class ViewNotifications extends Fragment {
 
 
         try {
-            FileInputStream fis = getActivity().openFileInput("notifications.txt");
+            FileInputStream fis = getActivity().openFileInput("notifications.xml");
             InputStreamReader isr = new InputStreamReader(fis);
             BufferedReader br = new BufferedReader(isr);
 

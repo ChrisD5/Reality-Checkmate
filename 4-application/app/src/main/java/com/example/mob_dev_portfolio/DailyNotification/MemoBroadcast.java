@@ -35,7 +35,7 @@ public class MemoBroadcast extends BroadcastReceiver {
 
         FileInputStream fis = null;
         try {
-            fis = context.openFileInput("notifications.txt");
+            fis = context.openFileInput("notifications.xml");
             BufferedReader reader = new BufferedReader(new InputStreamReader(fis));
 
             List<String> notifications = new ArrayList<>();
