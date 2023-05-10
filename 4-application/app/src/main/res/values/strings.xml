@@ -79,6 +79,8 @@
     <string name="win">This was supposed to be unbeatable, you\'re allowed an ego boost!</string>
     <string name="lose">You Can Draw, But You Can\'t Win… Life Story?</string>
     <string name="Ego_Crush">Ego Crush</string>
-
+    <string name="dialog1">Hold On…</string>
+    <string name="dialog2">Don\'t let your ego get head of you, Select an answer!</string>
+    <string name="dialog3">Sorry, I wont let you it happen again.</string>
 
 </resources>

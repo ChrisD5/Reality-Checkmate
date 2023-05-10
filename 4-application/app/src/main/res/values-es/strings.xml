@@ -80,4 +80,7 @@
     <string name="win">Esto se suponía que era imbatible, ¡tienes permitido un impulso de ego!</string>
     <string name="lose">Puedes empatar, pero no puedes ganar… ¿Historia de tu vida?</string>
     <string name="Ego_Crush">Aplastar el Ego</string>
+    <string name="dialog1">Espera…</string>
+    <string name="dialog2">¡No dejes que tu ego te supere, selecciona una respuesta!</string>
+    <string name="dialog3">Lo siento, no permitiré que vuelva a suceder.</string>
 </resources>

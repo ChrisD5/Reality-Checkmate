@@ -60,29 +60,43 @@ public class QuizFragment extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View view) {
-
         ansA.setTextColor(Color.WHITE);
         ansB.setTextColor(Color.WHITE);
         ansC.setTextColor(Color.WHITE);
         ansD.setTextColor(Color.WHITE);
 
-
-
         Button clickedButton = (Button) view;
-        if(clickedButton.getId()==R.id.submit_btn) {
-            if(selectedAnswer.equals(QuestionAnswer.correctAnswers[currentQuestionIndex])){
+        if (clickedButton.getId() == R.id.submit_btn) {
+            if (selectedAnswer.equals("")) {
+                // show an error message if no answer has been selected
+                final AlertDialog dialog = new AlertDialog.Builder(getActivity())
+                        .setView(R.layout.custom_alert_dialog)
+                        .show();
+
+                // Find the button in the dialog layout and set its click listener to dismiss the dialog
+                Button dialogButton = dialog.findViewById(R.id.alert_dialog_button);
+                dialogButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+                return;
+            }
+
+            if (selectedAnswer.equals(QuestionAnswer.correctAnswers[currentQuestionIndex])) {
                 score++;
             }
             currentQuestionIndex++;
+            selectedAnswer = ""; // reset selected answer for the next question
             loadNewQuestion();
 
-        }else{
+        } else {
             selectedAnswer = clickedButton.getText().toString();
             clickedButton.setTextColor(Color.BLACK);
         }
-
-
     }
+
 
     void loadNewQuestion(){
 

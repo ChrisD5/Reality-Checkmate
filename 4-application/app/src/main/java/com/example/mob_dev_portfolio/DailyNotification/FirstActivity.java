@@ -69,8 +69,8 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
 
         //In order to test notification functionality, change this date to your current date +2 minutes and restart the app then close app in emulator.
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, 16);
-        calendar.set(Calendar.MINUTE, 16);
+        calendar.set(Calendar.HOUR_OF_DAY, 00);
+        calendar.set(Calendar.MINUTE, 10);
         calendar.set(Calendar.SECOND, 00);
 
         if (Calendar.getInstance().after(calendar)) {
@@ -82,9 +82,7 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
 
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
-        }
+        alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
 
         try{
             FileOutputStream fileOutputStream = getApplicationContext().openFileOutput("notifications.xml", Context.MODE_APPEND);

@@ -77,4 +77,7 @@
     <string name="win">Roedd hwn yn anochel ei fuddugoliaeth, rydych yn gallu ennill hyder ego!</string>
     <string name="lose">Gallwch chi dynnu, ond ni allwch chi ennill… Hanes bywyd?</string>
     <string name="Ego_Crush">Dinistrio Ego</string>
+    <string name="dialog1">Aros…</string>
+    <string name="dialog2">Peidiwch â gadael i\’ch ego fynd ati, Dewiswch ateb!</string>
+    <string name="dialog3">Mae\’n ddrwg gennyf, ni fyddaf yn caniatáu i hyn ddigwydd eto.</string>
 </resources>

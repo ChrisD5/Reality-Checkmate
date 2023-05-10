@@ -80,4 +80,7 @@
     <string name="win">C\'était censé être insurmontable, vous pouvez vous permettre une poussée d\'égo !</string>
     <string name="lose">Vous pouvez dessiner, mais vous ne pouvez pas gagner… Histoire de vie ?</string>
     <string name="Ego_Crush">Broyeur d\'Ego</string>
+    <string name="dialog1">Attendez…</string>
+    <string name="dialog2">Ne laissez pas votre ego prendre le dessus, sélectionnez une réponse!</string>
+    <string name="dialog3">Désolé, je ne permettrai pas que cela se reproduise.</string>
 </resources>
