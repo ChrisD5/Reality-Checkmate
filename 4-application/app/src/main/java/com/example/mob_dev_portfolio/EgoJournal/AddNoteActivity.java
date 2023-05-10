@@ -55,7 +55,7 @@ public class AddNoteActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                Toast.makeText(AddNoteActivity.this, "Note saved", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(AddNoteActivity.this, R.string.save_note, Toast.LENGTH_SHORT).show();
                                 finish();
                             }
                         });

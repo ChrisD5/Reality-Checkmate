@@ -9,31 +9,31 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/nav_home"
-            android:title="Home" />
+            android:title="@string/nav_home" />
         <item
             android:id="@+id/nav_create"
             android:icon="@drawable/nav_custom_affirmation"
-            android:title="Create Notification"/>
+            android:title="@string/nav_create_notification"/>
         <item
             android:id="@+id/nav_view"
             android:icon="@drawable/nav_view"
-            android:title="View Notifications"/>
+            android:title="@string/nav_view_notifications"/>
         <item
             android:id="@+id/nav_quiz"
             android:icon="@drawable/nav_quiz"
-            android:title="Ego Test"/>
+            android:title="@string/nav_ego_test"/>
         <item
             android:id="@+id/nav_map"
             android:icon="@drawable/nav_map"
-            android:title="Find Therapy"/>
+            android:title="@string/nav_find_therapy"/>
         <item
             android:id="@+id/nav_journal"
             android:icon="@drawable/nav_journal"
-            android:title="Ego Journal"/>
+            android:title="@string/nav_ego_journal"/>
         <item
             android:id="@+id/nav_crush"
             android:icon="@drawable/nav_crush"
-            android:title="Ego Crush"/>
+            android:title="@string/nav_ego_crush"/>
 
 
     </group>

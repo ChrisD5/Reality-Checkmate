@@ -44,7 +44,7 @@ public class CreateFragment extends Fragment {
                     fileOutputStream.write(notificationStr.getBytes());
                     fileOutputStream.write(System.getProperty("line.separator").getBytes());
                     fileOutputStream.close();
-                    Toast.makeText(getActivity(), "Notification saved", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), R.string.notifsavetoast, Toast.LENGTH_SHORT).show();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -63,7 +63,7 @@ public class CreateFragment extends Fragment {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                Toast.makeText(getActivity(), "Cleared Custom Notifications", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), (R.string.clearcustoast), Toast.LENGTH_SHORT).show();
 
             }
         });

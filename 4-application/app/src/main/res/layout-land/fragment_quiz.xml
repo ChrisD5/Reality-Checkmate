@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="monospace"
-        android:text="Total Questions"
+        android:text="@string/Total_Questions"
         android:textColor="@color/white"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +26,7 @@
         android:layout_height="26dp"
         android:layout_marginTop="8dp"
         android:fontFamily="monospace"
-        android:text="This will be the question"
+        android:text="@string/This_will_be_the_question"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="10dp"
@@ -55,7 +55,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="#7f7f7f"
             android:fontFamily="monospace"
-            android:text="Ans A"
+            android:text="@string/Ans_A"
             android:textColor="@color/white" />
 
         <Button
@@ -65,7 +65,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="#7f7f7f"
             android:fontFamily="monospace"
-            android:text="Ans B"
+            android:text="@string/Ans_B"
             android:textColor="@color/white" />
 
         <Button
@@ -75,7 +75,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="#7f7f7f"
             android:fontFamily="monospace"
-            android:text="Ans C"
+            android:text="@string/Ans_C"
             android:textColor="@color/white" />
 
         <Button
@@ -85,7 +85,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="#7f7f7f"
             android:fontFamily="monospace"
-            android:text="Ans D"
+            android:text="@string/Ans_D"
             android:textColor="@color/white" />
 
 
@@ -99,7 +99,7 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/rounded_corners"
         android:fontFamily="monospace"
-        android:text="Submit"
+        android:text="@string/Submit"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

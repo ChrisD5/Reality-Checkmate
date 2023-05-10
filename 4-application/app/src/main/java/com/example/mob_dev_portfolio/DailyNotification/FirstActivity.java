@@ -88,7 +88,7 @@ public class FirstActivity extends AppCompatActivity implements NavigationView.O
 
         try{
             FileOutputStream fileOutputStream = getApplicationContext().openFileOutput("notifications.xml", Context.MODE_APPEND);
-            fileOutputStream.write("Don't let fear hold you back. Take calculated risks and trust in yourself.".getBytes());
+            fileOutputStream.write(getString(R.string.SampleNotif).getBytes());
             fileOutputStream.write(System.getProperty("line.separator").getBytes());
             fileOutputStream.close();
         } catch (IOException e) {

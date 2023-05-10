@@ -22,6 +22,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener{
     Button ansA, ansB, ansC, ansD;
     Button submitBtn;
 
+
     int score=0;
     int totalQuestions = QuestionAnswer.question.length;
     int currentQuestionIndex = 0;

@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:fontFamily="monospace"
-        android:text="Total Questions"
+        android:text="@string/Total_Questions"
         android:textColor="@color/white"
         android:textSize="14sp" />
 
@@ -27,7 +27,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="27dp"
         android:fontFamily="monospace"
-        android:text="This will be the question"
+        android:text="@string/This_will_be_the_question"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20dp"
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:backgroundTint="#7f7f7f"
-            android:text="Ans A"
+            android:text="@string/Ans_A"
             android:fontFamily="monospace"
             android:textColor="@color/white" />
 
@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:backgroundTint="#7f7f7f"
-            android:text="Ans B"
+            android:text="@string/Ans_B"
             android:fontFamily="monospace"
             android:textColor="@color/white" />
 
@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:backgroundTint="#7f7f7f"
-            android:text="Ans C"
+            android:text="@string/Ans_C"
             android:fontFamily="monospace"
             android:textColor="@color/white" />
 
@@ -77,7 +77,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:backgroundTint="#7f7f7f"
-            android:text="Ans D"
+            android:text="@string/Ans_D"
             android:fontFamily="monospace"
             android:textColor="@color/white" />
 
@@ -90,7 +90,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/choices_layout"
         android:layout_marginTop="120dp"
-        android:text="Submit"
+        android:text="@string/Submit"
         android:background="@drawable/rounded_corners"
         android:fontFamily="monospace"
         android:textColor="@color/white"/>

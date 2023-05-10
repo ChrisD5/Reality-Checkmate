@@ -118,11 +118,11 @@ public class EgoCrushMain extends Fragment {
                 mapBoardToUi();
 
                 if (board.hasComputerWon()) {
-                    resultTextView.setText("Can You Accept Defeat?");
+                    resultTextView.setText(R.string.defeat);
                 } else if (board.hasPlayerWon()) {
-                    resultTextView.setText("This was supposed to be unbeatable, you're allowed an ego boost!");
+                    resultTextView.setText(R.string.win);
                 } else if (board.isGameOver()) {
-                    resultTextView.setText("You Can Draw, But You Can't Win... Life Story?");
+                    resultTextView.setText(R.string.lose);
                 }
             }
         }

@@ -46,16 +46,16 @@ public class HomeFragment extends Fragment {
                         public void run() {
                             db.activityDao().deleteAllActivities();
                             db.activityDao().insertAll(
-                                    new Activity("Practice active listening: Instead of always talking about yourself and your accomplishments, make an effort to listen to others and engage in meaningful conversations.", "4/10"),
-                                    new Activity("Give compliments to others: Make it a habit to give genuine compliments to others on their strengths and achievements, rather than constantly seeking validation for your own.", "2/10"),
-                                    new Activity("Help someone in need: Volunteering your time and skills to help someone who is less fortunate can help you gain perspective and lower your ego.", "3/10"),
-                                    new Activity("Admit your mistakes: Instead of always trying to appear perfect, admit your mistakes and take responsibility for them. This can show humility and help you grow.", "5/10"),
-                                    new Activity("Do something anonymously: Perform a good deed without seeking recognition or praise, such as donating to a charity anonymously or helping a stranger in need.", "6/10"),
-                                    new Activity("Accept constructive criticism: Instead of becoming defensive when someone offers constructive criticism, listen to their feedback and use it to improve yourself.", "6/10"),
-                                    new Activity("Take a break from social media: Constantly seeking validation and attention on social media can feed your ego. Take a break from social media to focus on real-life relationships and activities.", "8/10"),
-                                    new Activity("Share credit: When working on a team or collaborating with others, make sure to share credit for successes and accomplishments.", "4/10"),
-                                    new Activity("Practice gratitude: Focusing on what you are grateful for can help you appreciate what you have and minimize the need for constant validation and attention.", "2/10"),
-                                    new Activity("Engage in activities that challenge you: Push yourself out of your comfort zone and engage in activities that challenge you, such as learning a new skill or taking on a difficult project. This can help you stay humble and focused on personal growth.", "7/10")
+                                    new Activity(getString(R.string.dailygoal_one), "4/10"),
+                                    new Activity(getString(R.string.dailygoal_two), "2/10"),
+                                    new Activity(getString(R.string.dailygoal_three), "3/10"),
+                                    new Activity(getString(R.string.dailygoal_four), "5/10"),
+                                    new Activity(getString(R.string.dailygoal_five), "6/10"),
+                                    new Activity(getString(R.string.dailygoal_six), "6/10"),
+                                    new Activity(getString(R.string.dailygoal_seven), "8/10"),
+                                    new Activity(getString(R.string.dailygoal_eight), "4/10"),
+                                    new Activity(getString(R.string.dailygoal_nine), "2/10"),
+                                    new Activity(getString(R.string.dailygoal_ten), "7/10")
 
                                     );
 

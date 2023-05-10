@@ -54,17 +54,17 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.MyViewHolder> 
             @Override
             public boolean onLongClick(View v) {
                 PopupMenu menu = new PopupMenu(context, v);
-                menu.getMenu().add("Delete");
+                menu.getMenu().add(context.getString(R.string.del_not));
                 menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
-                        if (item.getTitle().equals("Delete")) {
+                        if (item.getTitle().equals(context.getString(R.string.del_not))) {
                             Note note = notesList.get(holder.getAdapterPosition());
                             noteDao.delete(note);
                             notesList.remove(holder.getAdapterPosition());
                             notifyItemRemoved(holder.getAdapterPosition());
                             notifyItemRangeChanged(holder.getAdapterPosition(), notesList.size());
-                            Toast.makeText(context, "Note deleted", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context,R.string.not_del, Toast.LENGTH_SHORT).show();
                         }
                         return true;
                     }
