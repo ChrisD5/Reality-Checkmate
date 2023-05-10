@@ -78,6 +78,7 @@
     <string name="defeat">Can You Accept Defeat?</string>
     <string name="win">This was supposed to be unbeatable, you\'re allowed an ego boost!</string>
     <string name="lose">You Can Draw, But You Can\'t Win… Life Story?</string>
+    <string name="Ego_Crush">Ego Crush</string>
 
 
 </resources>

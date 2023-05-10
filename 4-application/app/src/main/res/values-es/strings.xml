@@ -79,4 +79,5 @@
     <string name="defeat">¿Puedes aceptar la derrota?</string>
     <string name="win">Esto se suponía que era imbatible, ¡tienes permitido un impulso de ego!</string>
     <string name="lose">Puedes empatar, pero no puedes ganar… ¿Historia de tu vida?</string>
+    <string name="Ego_Crush">Aplastar el Ego</string>
 </resources>

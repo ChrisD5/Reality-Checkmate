@@ -8,6 +8,16 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/notestitle"
+        android:text="@string/Ego_Crush"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:fontFamily="monospace"
+        android:textStyle="bold"/>
+
+    <TextView
         android:id="@+id/text_view_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
