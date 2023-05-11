@@ -1,19 +1,15 @@
 package com.example.mob_dev_portfolio.EgoJournal;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.example.mob_dev_portfolio.R;
 import com.example.mob_dev_portfolio.Database.Note;
 import com.example.mob_dev_portfolio.Database.NoteDatabase;
 import com.example.mob_dev_portfolio.databinding.ActivityAddNoteBinding;
-
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 

@@ -1,18 +1,13 @@
 package com.example.mob_dev_portfolio.EgoQuiz;
-
 import android.app.AlertDialog;
 import android.graphics.Color;
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-
-import com.example.mob_dev_portfolio.EgoQuiz.QuestionAnswer;
 import com.example.mob_dev_portfolio.R;
 
 public class QuizFragment extends Fragment implements View.OnClickListener{
@@ -116,21 +111,45 @@ public class QuizFragment extends Fragment implements View.OnClickListener{
         if (score > totalQuestions * 0.79) {
             passStatus = "With a score this high you may as well delete the app!";
         } else if (score > totalQuestions * 0.49) {
-            passStatus = "Not bad, your ego could do with some work though";
+            passStatus = "Not bad, your ego could do with some work though...";
         } else if (score > totalQuestions * 0.29) {
             passStatus = "You should take a long hard look at yourself";
         } else {
             passStatus = "I have no words, consider therapy?";
         }
 
-        new AlertDialog.Builder(getActivity())
-                .setTitle("Quiz Results")
-                .setMessage("You have scored " + score + " out of " + totalQuestions + ", " + passStatus)
-                .setPositiveButton("Restart", (dialogInterface, i) -> restartQuiz())
+        // Create the AlertDialog and set the custom view
+        AlertDialog dialog = new AlertDialog.Builder(getActivity())
+                .setView(R.layout.custom_alert_dialog_two)
                 .setCancelable(false)
-                .show();
+                .create();
 
+        // Show the AlertDialog
+        dialog.show();
+
+        // Find the TextViews in the AlertDialog layout and set their text
+        TextView title = dialog.findViewById(R.id.alert_dialog_title);
+        TextView message = dialog.findViewById(R.id.alert_dialog_message);
+        Button button = dialog.findViewById(R.id.alert_dialog_button);
+
+        if (title != null) {
+            title.setText("Quiz Results");
+        }
+        if (message != null) {
+            message.setText("You have scored " + score + " out of " + totalQuestions + ", " + passStatus);
+        }
+        if (button != null) {
+            button.setText("Restart");
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    restartQuiz();
+                    dialog.dismiss();
+                }
+            });
+        }
     }
+
 
     void restartQuiz(){
         score = 0;
